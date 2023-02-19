@@ -40,7 +40,7 @@ export default {
   computed: {
     id() {
       if (this.item.id.includes(".")) {
-        return this.item.id.split(".")[0] + "." + (this.index + 1);
+        return this.item.id.substring(0, this.item.id.length - 1) + (this.index + 1);
       } else {
         return this.item.id;
       }
