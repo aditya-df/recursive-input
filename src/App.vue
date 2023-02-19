@@ -41,9 +41,7 @@ export default {
       });
     },
     add(parentItem) {
-      let id = parentItem.length
-        ? +parentItem.at(-1).id + 1
-        : 1;
+      let id = parentItem.length ? +parentItem.at(-1).id + 1 : 1;
       parentItem.push({
         id: `${id}`,
         name: "",

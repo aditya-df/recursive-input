@@ -10,7 +10,7 @@
 
     <div class="ml-4" v-if="parentItem.subItems">
       <nested-input-item
-        v-for="(item,i) in parentItem.subItems"
+        v-for="(item, i) in parentItem.subItems"
         :key="item.id"
         :parentItem="item"
         :index="i"
@@ -30,14 +30,14 @@ export default {
       required: true,
       type: Object,
     },
-    index:{
-        type:Number
-    }
+    index: {
+      type: Number,
+    },
   },
   methods: {
     add(parentItem) {
       parentItem.subItems.unshift({
-        id: `${parentItem.id}.${parentItem.subItems.length+1}`,
+        id: `${parentItem.id}.${parentItem.subItems.length + 1}`,
         name: "",
         subItems: [],
       });
